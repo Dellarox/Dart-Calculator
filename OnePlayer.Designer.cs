@@ -39,10 +39,10 @@ namespace DartCalculator
             this.label1stThrow = new System.Windows.Forms.Label();
             this.label2ndThrow = new System.Windows.Forms.Label();
             this.label3rdThrow = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelBestEnding = new System.Windows.Forms.Label();
+            this.labelBestEndingFirst = new System.Windows.Forms.Label();
+            this.labelBestEndingSecond = new System.Windows.Forms.Label();
+            this.labelBestEndingThird = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelPoints
@@ -58,7 +58,7 @@ namespace DartCalculator
             // textBoxFirstThrow
             // 
             this.textBoxFirstThrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxFirstThrow.Location = new System.Drawing.Point(12, 88);
+            this.textBoxFirstThrow.Location = new System.Drawing.Point(12, 62);
             this.textBoxFirstThrow.Name = "textBoxFirstThrow";
             this.textBoxFirstThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxFirstThrow.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace DartCalculator
             // buttonSubtract
             // 
             this.buttonSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSubtract.Location = new System.Drawing.Point(12, 150);
+            this.buttonSubtract.Location = new System.Drawing.Point(12, 104);
             this.buttonSubtract.Name = "buttonSubtract";
             this.buttonSubtract.Size = new System.Drawing.Size(103, 42);
             this.buttonSubtract.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace DartCalculator
             // textBoxSecondThrow
             // 
             this.textBoxSecondThrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxSecondThrow.Location = new System.Drawing.Point(71, 88);
+            this.textBoxSecondThrow.Location = new System.Drawing.Point(71, 62);
             this.textBoxSecondThrow.Name = "textBoxSecondThrow";
             this.textBoxSecondThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxSecondThrow.TabIndex = 3;
@@ -85,7 +85,7 @@ namespace DartCalculator
             // textBoxThirdThrow
             // 
             this.textBoxThirdThrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxThirdThrow.Location = new System.Drawing.Point(130, 88);
+            this.textBoxThirdThrow.Location = new System.Drawing.Point(130, 62);
             this.textBoxThirdThrow.Name = "textBoxThirdThrow";
             this.textBoxThirdThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxThirdThrow.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace DartCalculator
             // buttonBackToMainWindow
             // 
             this.buttonBackToMainWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonBackToMainWindow.Location = new System.Drawing.Point(136, 150);
+            this.buttonBackToMainWindow.Location = new System.Drawing.Point(130, 106);
             this.buttonBackToMainWindow.Name = "buttonBackToMainWindow";
             this.buttonBackToMainWindow.Size = new System.Drawing.Size(123, 42);
             this.buttonBackToMainWindow.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace DartCalculator
             // label1stThrow
             // 
             this.label1stThrow.AutoSize = true;
-            this.label1stThrow.Location = new System.Drawing.Point(9, 72);
+            this.label1stThrow.Location = new System.Drawing.Point(9, 46);
             this.label1stThrow.Name = "label1stThrow";
             this.label1stThrow.Size = new System.Drawing.Size(40, 13);
             this.label1stThrow.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace DartCalculator
             // label2ndThrow
             // 
             this.label2ndThrow.AutoSize = true;
-            this.label2ndThrow.Location = new System.Drawing.Point(68, 72);
+            this.label2ndThrow.Location = new System.Drawing.Point(68, 46);
             this.label2ndThrow.Name = "label2ndThrow";
             this.label2ndThrow.Size = new System.Drawing.Size(40, 13);
             this.label2ndThrow.TabIndex = 7;
@@ -122,58 +122,55 @@ namespace DartCalculator
             // label3rdThrow
             // 
             this.label3rdThrow.AutoSize = true;
-            this.label3rdThrow.Location = new System.Drawing.Point(127, 72);
+            this.label3rdThrow.Location = new System.Drawing.Point(127, 46);
             this.label3rdThrow.Name = "label3rdThrow";
             this.label3rdThrow.Size = new System.Drawing.Size(40, 13);
             this.label3rdThrow.TabIndex = 8;
             this.label3rdThrow.Text = "Throw:";
             // 
-            // label1
+            // labelBestEnding
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(271, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 31);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Best ending:";
+            this.labelBestEnding.AutoSize = true;
+            this.labelBestEnding.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelBestEnding.Location = new System.Drawing.Point(214, 9);
+            this.labelBestEnding.Name = "labelBestEnding";
+            this.labelBestEnding.Size = new System.Drawing.Size(225, 31);
+            this.labelBestEnding.TabIndex = 9;
+            this.labelBestEnding.Text = "Best ending path:";
             // 
-            // label2
+            // labelBestEndingFirst
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(274, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 10;
+            this.labelBestEndingFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelBestEndingFirst.Location = new System.Drawing.Point(229, 62);
+            this.labelBestEndingFirst.Name = "labelBestEndingFirst";
+            this.labelBestEndingFirst.Size = new System.Drawing.Size(56, 26);
+            this.labelBestEndingFirst.TabIndex = 10;
             // 
-            // label3
+            // labelBestEndingSecond
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(336, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
-            this.label3.TabIndex = 11;
+            this.labelBestEndingSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelBestEndingSecond.Location = new System.Drawing.Point(291, 62);
+            this.labelBestEndingSecond.Name = "labelBestEndingSecond";
+            this.labelBestEndingSecond.Size = new System.Drawing.Size(56, 26);
+            this.labelBestEndingSecond.TabIndex = 11;
             // 
-            // label4
+            // labelBestEndingThird
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(398, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
-            this.label4.TabIndex = 12;
+            this.labelBestEndingThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelBestEndingThird.Location = new System.Drawing.Point(353, 62);
+            this.labelBestEndingThird.Name = "labelBestEndingThird";
+            this.labelBestEndingThird.Size = new System.Drawing.Size(56, 26);
+            this.labelBestEndingThird.TabIndex = 12;
             // 
             // OnePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 204);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(460, 160);
+            this.Controls.Add(this.labelBestEndingThird);
+            this.Controls.Add(this.labelBestEndingSecond);
+            this.Controls.Add(this.labelBestEndingFirst);
+            this.Controls.Add(this.labelBestEnding);
             this.Controls.Add(this.label3rdThrow);
             this.Controls.Add(this.label2ndThrow);
             this.Controls.Add(this.label1stThrow);
@@ -203,9 +200,9 @@ namespace DartCalculator
         private System.Windows.Forms.Label label1stThrow;
         private System.Windows.Forms.Label label2ndThrow;
         private System.Windows.Forms.Label label3rdThrow;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelBestEnding;
+        private System.Windows.Forms.Label labelBestEndingFirst;
+        private System.Windows.Forms.Label labelBestEndingSecond;
+        private System.Windows.Forms.Label labelBestEndingThird;
     }
 }
