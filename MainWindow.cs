@@ -21,5 +21,12 @@ namespace DartCalculator
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void buttonTwoPlayers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TwoPlayers twoPlayers = new TwoPlayers();
+            twoPlayers.ShowDialog();
+        }
     }
 }

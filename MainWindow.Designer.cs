@@ -64,6 +64,7 @@ namespace DartCalculator
             this.buttonTwoPlayers.TabIndex = 4;
             this.buttonTwoPlayers.Text = "2 PLAYERS";
             this.buttonTwoPlayers.UseVisualStyleBackColor = true;
+            this.buttonTwoPlayers.Click += new System.EventHandler(this.buttonTwoPlayers_Click);
             // 
             // MainWindow
             // 
