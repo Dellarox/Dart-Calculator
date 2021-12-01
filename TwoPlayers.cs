@@ -33,7 +33,7 @@ namespace DartCalculator
             labelFirstPlayerBestEndingFirst.Text = "";
             labelFirstPlayerBestEndingSecond.Text = "";
             labelFirstPlayerBestEndingThird.Text = "";
-
+          
             if ((((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 20))
                 || ((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 40) && int.Parse(textBoxFirstPlayerFirstThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 60) && int.Parse(textBoxFirstPlayerFirstThrow.Text) % 3 == 0)

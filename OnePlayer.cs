@@ -874,5 +874,20 @@ namespace DartCalculator
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void textBoxFirstThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxSecondThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxThirdThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
     }
 }

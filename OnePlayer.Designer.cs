@@ -63,6 +63,7 @@ namespace DartCalculator
             this.textBoxFirstThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxFirstThrow.TabIndex = 1;
             this.textBoxFirstThrow.Text = "0";
+            this.textBoxFirstThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstThrow_KeyPress);
             // 
             // buttonSubtract
             // 
@@ -83,6 +84,7 @@ namespace DartCalculator
             this.textBoxSecondThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxSecondThrow.TabIndex = 3;
             this.textBoxSecondThrow.Text = "0";
+            this.textBoxSecondThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSecondThrow_KeyPress);
             // 
             // textBoxThirdThrow
             // 
@@ -92,6 +94,7 @@ namespace DartCalculator
             this.textBoxThirdThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxThirdThrow.TabIndex = 4;
             this.textBoxThirdThrow.Text = "0";
+            this.textBoxThirdThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxThirdThrow_KeyPress);
             // 
             // buttonBackToMainWindow
             // 
