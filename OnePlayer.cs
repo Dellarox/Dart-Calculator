@@ -5,6 +5,7 @@ namespace DartCalculator
 {
     public partial class OnePlayer : Form
     {
+        
         public OnePlayer()
         {
             InitializeComponent();
@@ -19,120 +20,146 @@ namespace DartCalculator
             labelBestEndingSecond.Text = "";
             labelBestEndingThird.Text = "";
 
-            if (labelPoints.Text == "2" && (textBoxFirstThrow.Text == "1" || textBoxSecondThrow.Text == "1" || textBoxThirdThrow.Text == "1")) { // jezeli zostaly 2 punkty i rzucona zostanie 1 to
-                MessageBox.Show("FURA");
-            }
-            else
+            if (((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 20))
+                || ((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 40) && int.Parse(textBoxFirstThrow.Text) % 2 == 0)
+                || ((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 60) && int.Parse(textBoxFirstThrow.Text) % 3 == 0)
+                || (int.Parse(textBoxFirstThrow.Text) == 25) // wrong value in first throw
+                || ((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 20))
+                || ((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 40) && int.Parse(textBoxSecondThrow.Text) % 2 == 0)
+                || ((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 60) && int.Parse(textBoxSecondThrow.Text) % 3 == 0)
+                || (int.Parse(textBoxSecondThrow.Text) == 25) // wrong value in second throw
+                || ((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 20))
+                || ((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 40) && int.Parse(textBoxThirdThrow.Text) % 2 == 0)
+                || ((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 60) && int.Parse(textBoxThirdThrow.Text) % 3 == 0)
+                || (int.Parse(textBoxThirdThrow.Text) == 25)) // wrong value in third throw
             {
-                if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text) && string.IsNullOrWhiteSpace(textBoxSecondThrow.Text) && string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
-                {
-                    MessageBox.Show("All boxes are empty!");
-                } // wszystkie puste
-                else if (string.IsNullOrWhiteSpace(textBoxSecondThrow.Text) && string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
-                {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxFirstThrow.Text);
-
-                    if (subtract > actualNumber)
-                    {
-                        MessageBox.Show("FURA!");
-                    }
-                    else
-                    {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // drugi trzeci pusty
-                else if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text) && string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
-                {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxSecondThrow.Text);
-
-                    if (subtract > actualNumber)
-                    {
-                        MessageBox.Show("FURA!");
-                    }
-                    else
-                    {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // pierwszy trzeci pusty
-                else if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text) && string.IsNullOrWhiteSpace(textBoxSecondThrow.Text))
-                {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxThirdThrow.Text);
-
-                    if (subtract > actualNumber)
-                    {
-                        MessageBox.Show("FURA!");
-                    }
-                    else
-                    {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // drugi pierwszy pusty
-                else if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text))
-                {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxThirdThrow.Text) + int.Parse(textBoxSecondThrow.Text);
-
-                    if (subtract > actualNumber)
-                    {
-                        MessageBox.Show("FURA!");
-                    }
-                    else
-                    {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // tylko pierwszy pusty
-                else if (string.IsNullOrWhiteSpace(textBoxSecondThrow.Text))
-                {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxThirdThrow.Text) + int.Parse(textBoxFirstThrow.Text);
-
-                    if (subtract > actualNumber)
-                    {
-                        MessageBox.Show("FURA!");
-                    }
-                    else
-                    {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // tylko drugi pusty
-                else if (string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
-                {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxSecondThrow.Text) + int.Parse(textBoxFirstThrow.Text);
-
-                    if (subtract > actualNumber)
-                    {
-                        MessageBox.Show("FURA!");
-                    }
-                    else
-                    {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // tylko trzeci pusty
+                if (labelPoints.Text == "2" && (textBoxFirstThrow.Text == "1" || textBoxSecondThrow.Text == "1" || textBoxThirdThrow.Text == "1"))
+                { 
+                    MessageBox.Show("BUST");
+                } // if left 2 points and 1 was thrown:
                 else
                 {
-                    actualNumber = int.Parse(labelPoints.Text);
-                    subtract = int.Parse(textBoxFirstThrow.Text) + int.Parse(textBoxSecondThrow.Text) + int.Parse(textBoxThirdThrow.Text);
-
-                    if (subtract > actualNumber)
+                    if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text) && string.IsNullOrWhiteSpace(textBoxSecondThrow.Text) && string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
                     {
-                        MessageBox.Show("FURA!");
-                    }
+                        MessageBox.Show("All boxes are empty!");
+                    } // all empty
+                    else if (string.IsNullOrWhiteSpace(textBoxSecondThrow.Text) && string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
+                    {
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxFirstThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // second and third empty
+                    else if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text) && string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
+                    {
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxSecondThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // first and third empty
+                    else if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text) && string.IsNullOrWhiteSpace(textBoxSecondThrow.Text))
+                    {
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxThirdThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // second and first empty
+                    else if (string.IsNullOrWhiteSpace(textBoxFirstThrow.Text))
+                    {
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxThirdThrow.Text) + int.Parse(textBoxSecondThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // only first empty
+                    else if (string.IsNullOrWhiteSpace(textBoxSecondThrow.Text))
+                    {
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxThirdThrow.Text) + int.Parse(textBoxFirstThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // only second empty
+                    else if (string.IsNullOrWhiteSpace(textBoxThirdThrow.Text))
+                    {
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxSecondThrow.Text) + int.Parse(textBoxFirstThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // only third empty
                     else
                     {
-                        actualNumber -= subtract;
-                        labelPoints.Text = actualNumber.ToString();
-                    }
-                } // żaden niepusty
+                        actualNumber = int.Parse(labelPoints.Text);
+                        subtract = int.Parse(textBoxFirstThrow.Text) + int.Parse(textBoxSecondThrow.Text) + int.Parse(textBoxThirdThrow.Text);
+
+                        if (subtract > actualNumber)
+                        {
+                            MessageBox.Show("BUST!");
+                        }
+                        else
+                        {
+                            actualNumber -= subtract;
+                            labelPoints.Text = actualNumber.ToString();
+                        }
+                    } // all throws are good
+                }
+
+                if (labelPoints.Text == "0")
+                {
+                    MessageBox.Show("You've done it!\nNow You'll be move to Main Window.");
+                    this.Hide();
+                    MainWindow mw = new MainWindow();
+                    mw.ShowDialog();
+                }
+            }
+            else {
+                MessageBox.Show("Wrong value!");
             }
 
             switch (labelPoints.Text)
@@ -829,15 +856,11 @@ namespace DartCalculator
                 case "2":
                     labelBestEndingFirst.Text = "D1";
                     break;
-            } // switch pokazujący najlepszy koniec
+            } // switch that shows the best ending
 
-            if(labelPoints.Text == "0")
-            {
-                MessageBox.Show("You've done it!\nNow You'll be move to Main Window.");
-                this.Hide();
-                MainWindow mw = new MainWindow();
-                mw.ShowDialog();
-            }
+            textBoxFirstThrow.Text = "0";
+            textBoxSecondThrow.Text = "0";
+            textBoxThirdThrow.Text = "0";
         }
 
         private void buttonBackToMainWindow_Click(object sender, EventArgs e)

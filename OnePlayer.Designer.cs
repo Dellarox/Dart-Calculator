@@ -62,6 +62,7 @@ namespace DartCalculator
             this.textBoxFirstThrow.Name = "textBoxFirstThrow";
             this.textBoxFirstThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxFirstThrow.TabIndex = 1;
+            this.textBoxFirstThrow.Text = "0";
             // 
             // buttonSubtract
             // 
@@ -81,6 +82,7 @@ namespace DartCalculator
             this.textBoxSecondThrow.Name = "textBoxSecondThrow";
             this.textBoxSecondThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxSecondThrow.TabIndex = 3;
+            this.textBoxSecondThrow.Text = "0";
             // 
             // textBoxThirdThrow
             // 
@@ -89,6 +91,7 @@ namespace DartCalculator
             this.textBoxThirdThrow.Name = "textBoxThirdThrow";
             this.textBoxThirdThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxThirdThrow.TabIndex = 4;
+            this.textBoxThirdThrow.Text = "0";
             // 
             // buttonBackToMainWindow
             // 
