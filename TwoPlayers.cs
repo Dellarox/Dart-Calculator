@@ -1750,5 +1750,35 @@ namespace DartCalculator
             textBoxSecondPlayerThirdThrow.Enabled = false;
             buttonSecondPlayerSubtract.Enabled = false;
         }
+
+        private void textBoxFirstPlayerFirstThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxFirstPlayerSecondThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxFirstPlayerThirdThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxSecondPlayerFirstThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxSecondPlayerSecondThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private void textBoxSecondPlayerThirdThrow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
     }
 }

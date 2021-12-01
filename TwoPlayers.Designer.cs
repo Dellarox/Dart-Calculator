@@ -128,6 +128,7 @@ namespace DartCalculator
             this.textBoxFirstPlayerThirdThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxFirstPlayerThirdThrow.TabIndex = 17;
             this.textBoxFirstPlayerThirdThrow.Text = "0";
+            this.textBoxFirstPlayerThirdThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstPlayerThirdThrow_KeyPress);
             // 
             // textBoxFirstPlayerSecondThrow
             // 
@@ -137,6 +138,7 @@ namespace DartCalculator
             this.textBoxFirstPlayerSecondThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxFirstPlayerSecondThrow.TabIndex = 16;
             this.textBoxFirstPlayerSecondThrow.Text = "0";
+            this.textBoxFirstPlayerSecondThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstPlayerSecondThrow_KeyPress);
             // 
             // buttonFirstPlayerSubtract
             // 
@@ -157,6 +159,7 @@ namespace DartCalculator
             this.textBoxFirstPlayerFirstThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxFirstPlayerFirstThrow.TabIndex = 14;
             this.textBoxFirstPlayerFirstThrow.Text = "0";
+            this.textBoxFirstPlayerFirstThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstPlayerFirstThrow_KeyPress);
             // 
             // labelFirstPlayerPoints
             // 
@@ -248,6 +251,7 @@ namespace DartCalculator
             this.textBoxSecondPlayerThirdThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxSecondPlayerThirdThrow.TabIndex = 30;
             this.textBoxSecondPlayerThirdThrow.Text = "0";
+            this.textBoxSecondPlayerThirdThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSecondPlayerThirdThrow_KeyPress);
             // 
             // textBoxSecondPlayerSecondThrow
             // 
@@ -257,6 +261,7 @@ namespace DartCalculator
             this.textBoxSecondPlayerSecondThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxSecondPlayerSecondThrow.TabIndex = 29;
             this.textBoxSecondPlayerSecondThrow.Text = "0";
+            this.textBoxSecondPlayerSecondThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSecondPlayerSecondThrow_KeyPress);
             // 
             // buttonSecondPlayerSubtract
             // 
@@ -277,6 +282,7 @@ namespace DartCalculator
             this.textBoxSecondPlayerFirstThrow.Size = new System.Drawing.Size(53, 26);
             this.textBoxSecondPlayerFirstThrow.TabIndex = 27;
             this.textBoxSecondPlayerFirstThrow.Text = "0";
+            this.textBoxSecondPlayerFirstThrow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSecondPlayerFirstThrow_KeyPress);
             // 
             // labelSecondPlayerPoints
             // 
