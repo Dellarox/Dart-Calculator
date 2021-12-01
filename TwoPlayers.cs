@@ -34,18 +34,18 @@ namespace DartCalculator
             labelFirstPlayerBestEndingSecond.Text = "";
             labelFirstPlayerBestEndingThird.Text = "";
 
-            if (((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 20))
+            if ((((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 20))
                 || ((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 40) && int.Parse(textBoxFirstPlayerFirstThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxFirstPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerFirstThrow.Text) <= 60) && int.Parse(textBoxFirstPlayerFirstThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxFirstPlayerFirstThrow.Text) == 25) // wrong value in first throw
-                || ((int.Parse(textBoxFirstPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerSecondThrow.Text) <= 20))
+                || (int.Parse(textBoxFirstPlayerFirstThrow.Text) == 25)) // wrong value in first throw
+                && (((int.Parse(textBoxFirstPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerSecondThrow.Text) <= 20))
                 || ((int.Parse(textBoxFirstPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerSecondThrow.Text) <= 40) && int.Parse(textBoxFirstPlayerSecondThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxFirstPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerSecondThrow.Text) <= 60) && int.Parse(textBoxFirstPlayerSecondThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxFirstPlayerSecondThrow.Text) == 25) // wrong value in second throw
-                || ((int.Parse(textBoxFirstPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerThirdThrow.Text) <= 20))
+                || (int.Parse(textBoxFirstPlayerSecondThrow.Text) == 25)) // wrong value in second throw
+                && (((int.Parse(textBoxFirstPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerThirdThrow.Text) <= 20))
                 || ((int.Parse(textBoxFirstPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerThirdThrow.Text) <= 40) && int.Parse(textBoxFirstPlayerThirdThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxFirstPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxFirstPlayerThirdThrow.Text) <= 60) && int.Parse(textBoxFirstPlayerThirdThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxFirstPlayerThirdThrow.Text) == 25)) // wrong value in third throw
+                || (int.Parse(textBoxFirstPlayerThirdThrow.Text) == 25))) // wrong value in third throw
             {
                 if (labelFirstPlayerPoints.Text == "2" && (textBoxFirstPlayerFirstThrow.Text == "1" || textBoxFirstPlayerSecondThrow.Text == "1" || textBoxFirstPlayerThirdThrow.Text == "1"))
                 {
@@ -897,18 +897,18 @@ namespace DartCalculator
             labelSecondPlayerBestEndingSecond.Text = "";
             labelSecondPlayerBestEndingThird.Text = "";
 
-            if (((int.Parse(textBoxSecondPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerFirstThrow.Text) <= 20))
+            if ((((int.Parse(textBoxSecondPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerFirstThrow.Text) <= 20))
                 || ((int.Parse(textBoxSecondPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerFirstThrow.Text) <= 40) && int.Parse(textBoxSecondPlayerFirstThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxSecondPlayerFirstThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerFirstThrow.Text) <= 60) && int.Parse(textBoxSecondPlayerFirstThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxSecondPlayerFirstThrow.Text) == 25) // wrong value in first throw
-                || ((int.Parse(textBoxSecondPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerSecondThrow.Text) <= 20))
+                || (int.Parse(textBoxSecondPlayerFirstThrow.Text) == 25)) // wrong value in first throw
+                && (((int.Parse(textBoxSecondPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerSecondThrow.Text) <= 20))
                 || ((int.Parse(textBoxSecondPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerSecondThrow.Text) <= 40) && int.Parse(textBoxSecondPlayerSecondThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxSecondPlayerSecondThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerSecondThrow.Text) <= 60) && int.Parse(textBoxSecondPlayerSecondThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxSecondPlayerSecondThrow.Text) == 25) // wrong value in second throw
-                || ((int.Parse(textBoxSecondPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerThirdThrow.Text) <= 20))
+                || (int.Parse(textBoxSecondPlayerSecondThrow.Text) == 25)) // wrong value in second throw
+                && (((int.Parse(textBoxSecondPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerThirdThrow.Text) <= 20))
                 || ((int.Parse(textBoxSecondPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerThirdThrow.Text) <= 40) && int.Parse(textBoxSecondPlayerThirdThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxSecondPlayerThirdThrow.Text) >= 0 && int.Parse(textBoxSecondPlayerThirdThrow.Text) <= 60) && int.Parse(textBoxSecondPlayerThirdThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxSecondPlayerThirdThrow.Text) == 25)) // wrong value in third throw
+                || (int.Parse(textBoxSecondPlayerThirdThrow.Text) == 25))) // wrong value in third throw) // wrong value in third throw
             {
                 if (labelSecondPlayerPoints.Text == "2" && (textBoxSecondPlayerFirstThrow.Text == "1" || textBoxSecondPlayerSecondThrow.Text == "1" || textBoxSecondPlayerThirdThrow.Text == "1"))
                 {

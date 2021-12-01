@@ -20,18 +20,18 @@ namespace DartCalculator
             labelBestEndingSecond.Text = "";
             labelBestEndingThird.Text = "";
 
-            if (((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 20))
+            if ((((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 20))
                 || ((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 40) && int.Parse(textBoxFirstThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxFirstThrow.Text) >= 0 && int.Parse(textBoxFirstThrow.Text) <= 60) && int.Parse(textBoxFirstThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxFirstThrow.Text) == 25) // wrong value in first throw
-                || ((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 20))
+                || (int.Parse(textBoxFirstThrow.Text) == 25)) // wrong value in first throw
+                && (((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 20))
                 || ((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 40) && int.Parse(textBoxSecondThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxSecondThrow.Text) >= 0 && int.Parse(textBoxSecondThrow.Text) <= 60) && int.Parse(textBoxSecondThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxSecondThrow.Text) == 25) // wrong value in second throw
-                || ((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 20))
+                || (int.Parse(textBoxSecondThrow.Text) == 25)) // wrong value in second throw
+                && (((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 20))
                 || ((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 40) && int.Parse(textBoxThirdThrow.Text) % 2 == 0)
                 || ((int.Parse(textBoxThirdThrow.Text) >= 0 && int.Parse(textBoxThirdThrow.Text) <= 60) && int.Parse(textBoxThirdThrow.Text) % 3 == 0)
-                || (int.Parse(textBoxThirdThrow.Text) == 25)) // wrong value in third throw
+                || (int.Parse(textBoxThirdThrow.Text) == 25))) // wrong value in third throw
             {
                 if (labelPoints.Text == "2" && (textBoxFirstThrow.Text == "1" || textBoxSecondThrow.Text == "1" || textBoxThirdThrow.Text == "1"))
                 { 
